@@ -4,6 +4,17 @@
 <br>
 
 ## 😎 학습자료
+
+<details>
+<summary>웹 기초 강의 참고</summary>
+<div markdown="1">
+  
+  - [생활코딩 HTML/CSS/JS 강의](https://opentutorials.org/course/3083)
+  - [부스트코스 웹 프론트엔드 시작하기 (리액트&리덕스)](https://www.boostcourse.org/web231)
+  
+</div>
+</details>
+
 1. 누구든지 누구든지 하는 리액트 초심자를 위한 리액트 핵심 강좌 ([유튜브](https://www.youtube.com/watch?v=fT9iFFAt60E&list=PL9FpF_z-xR_E4rxYMMZx5cOpwaiwCzWUH&index=1)) 
 
 2. [벨로퍼트와 함께하는 모던 리액트](https://react.vlpt.us) 
