@@ -5,17 +5,16 @@
 <br>
 
 ## 😎 학습자료
-1. 누구든지 누구든지 하는 리액트 초심자를 위한 리액트 핵심 강좌([유튜브](https://www.youtube.com/watch?v=fT9iFFAt60E&list=PL9FpF_z-xR_E4rxYMMZx5cOpwaiwCzWUH&index=1)  
+1. 누구든지 누구든지 하는 리액트 초심자를 위한 리액트 핵심 강좌([유튜브](https://www.youtube.com/watch?v=fT9iFFAt60E&list=PL9FpF_z-xR_E4rxYMMZx5cOpwaiwCzWUH&index=1)) 
 
-2. [React 패스트 캠프 관련 문서](https://react.vlpt.us)    
+2. [벨로퍼트와 함께하는 모던 리액트](https://react.vlpt.us) 
 
-3. [React 공식문서](https://reactjs.org/tutorial/tutorial.html)     
+3. [React 공식문서](https://reactjs.org/tutorial/tutorial.html)
 
 4. Express 와 React.js 를 사용한 웹 어플리케이션 만들기 ([인프런](https://www.inflearn.com/course/react-%EA%B0%95%EC%A2%8C-velopert#curriculum), [블로그](https://velopert.com/tag/reactcodelab) 동시)
 
 <br>
 <br>    
-
 
 ## 스터디 방법
 - 스터디 주차별로 각자 공부 후 자신이 공부한 기록을 **이름에 링크를 걸어** 인증해주세요! 
@@ -38,7 +37,5 @@
 |7주차|- 2번자료 4장, 5장 <br> - 3번자료 Advanced| [전의정]() [이하은]() [배현철]() [김연수]() |
 |8주차|- 2번자료 6장 <br> - 3번자료 Advanced| [전의정]() [이하은]() [배현철]() [김연수]() |
 |9주차|- 2번자료 7장, 8장 <br> - 3번자료 Advanced| [전의정]() [이하은]() [배현철]() [김연수]() |
-|10주차|- 2번자료 4장, 5장 <br> - 3번자료 Advanced| [전의정]() [이하은]() [배현철]() [김연수]() |
-
 
 10주차 11주차는 홈페이지 개발을 위해 남겨둘 예정.. 
