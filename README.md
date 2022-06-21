@@ -3,15 +3,15 @@
 <br>
 <br>
 
-## 😎 학습자료
+## 😎 우리들의 학습자료
 
 <details>
 <summary>웹 기초 강의 참고</summary>
 <div markdown="1">
-  
+
   - [생활코딩 HTML/CSS/JS 강의](https://opentutorials.org/course/3083)
   - [부스트코스 웹 프론트엔드 시작하기 (리액트&리덕스)](https://www.boostcourse.org/web231)
-  
+
 </div>
 </details>
 
@@ -29,13 +29,14 @@
 ## 스터디 방법
 - 스터디 주차별로 각자 공부 후 자신이 공부한 기록을 **이름에 링크를 걸어** 인증해주세요! 
 - 프로젝트로 인증할 경우 이 레포에 "[이름] 주차" 폴더를 만들고 이름에 폴더 위치 링크를 걸어 인증해주세요!
-- 매주 2시간씩 **디스코드에서 모각코** 진행
-- 스터디 커리큘럼대로 기록을 남겨도 좋고 이외의 추가 자료(3번,4번)를 보면서 공부해도 좋아요!
+- 스터디 커리큘럼대로 기록을 남겨도 좋고 이외의 자료를 보면서 공부해도 좋아요!
 
 <br>
 <br>
 
-## 스터디 일정
+## 스터디 일정     
+공식 스터디 일정은 다음과 같습니다! 개인에 맞게 다른 자료로 스터디를 진행하셔도 좋지만 반드시 공부 기록은 있어야 한다는 점!
+
 |주차|내용|인증|
 |:---:|---|---|
 |1주차|- [자바스크립트에 대해서](https://dev.to/nsebhastian/javascript-basics-before-you-learn-react-38en) <br> - 3번자료 Tutorial Overview까지 정리| [전의정]() [이하은]() [배현철]() [김연수]() |
@@ -49,3 +50,27 @@
 |9주차|- 2번자료 7장, 8장 <br> - 3번자료 Advanced| [전의정]() [이하은]() [배현철]() [김연수]() |
 
 10주차 11주차는 홈페이지 개발을 위해 남겨둘 예정.. 
+
+<br>
+<br>
+
+## Study Member 
+<table algin="center">
+   <tr>
+      <td colspan="1" align="center"><strong>PM</strong></td>
+      <td colspan="3" align="center"><strong>Member</strong></td>
+   </tr>
+  <tr>
+     <td align="center">
+        <a href="https://github.com/juijeong8324"><img src="https://avatars.githubusercontent.com/u/63052097?v=4" width="150px" alt="전의정"/><br /><sub><b>전의정</b></sub></a>
+     </td>
+    <td align="center">
+    <a href="https://github.com/leeeha"><img src="https://avatars.githubusercontent.com/u/81352045?v=4" width="150px;" alt="이하은"/><br /><sub><b>이하은</b></sub></a><br />
+    </td>
+     <td align="center">
+        <a href="https://github.com/hchbae1001"><img src="https://avatars.githubusercontent.com/u/50735594?v=4" width="150px" alt="배현철"/><br /><sub><b>배현철</b></sub></a>
+     </td>
+     <td align="center">
+        <a href="https://github.com/"><img src="" width="150px" alt="김연수"/><br /><sub><b>김연수</b></sub></a>
+  <tr>
+</table> 
