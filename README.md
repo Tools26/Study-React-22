@@ -5,7 +5,7 @@
 <br>
 
 ## 😎 학습자료
-1. 누구든지 누구든지 하는 리액트 초심자를 위한 리액트 핵심 강좌([유튜브](https://www.youtube.com/watch?v=fT9iFFAt60E&list=PL9FpF_z-xR_E4rxYMMZx5cOpwaiwCzWUH&index=1)) 
+1. 누구든지 누구든지 하는 리액트 초심자를 위한 리액트 핵심 강좌 ([유튜브](https://www.youtube.com/watch?v=fT9iFFAt60E&list=PL9FpF_z-xR_E4rxYMMZx5cOpwaiwCzWUH&index=1)) 
 
 2. [벨로퍼트와 함께하는 모던 리액트](https://react.vlpt.us) 
 
