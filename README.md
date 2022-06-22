@@ -64,6 +64,6 @@
         <a href="https://github.com/hchbae1001"><img src="https://avatars.githubusercontent.com/u/50735594?v=4" width="150px" alt="배현철"/><br /><sub><b>배현철</b></sub></a>
      </td>
      <td align="center">
-        <a href="https://github.com/"><img src="" width="150px" alt="김연수"/><br /><sub><b>김연수</b></sub></a>
+        <a href="https://github.com/dustnehowl"><img src="" width="150px" alt="김연수"/><br /><sub><b>김연수</b></sub></a>
   <tr>
 </table> 
