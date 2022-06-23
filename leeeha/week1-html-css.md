@@ -8,8 +8,17 @@ https://opentutorials.org/course/3086 (CSS)
 
 # 목차 
 
-- [HTML (Hypertext Markup Language)](#html) 
-- [CSS (Cascading Style Sheets)](#css) 
+- [HTML](#html)
+  * [태그와 속성](#태그와-속성)
+  * [서버와 클라이언트](#서버와-클라이언트)
+  * [웹호스팅](#웹호스팅)
+- [CSS](#css)
+  * [Selector의 우선순위](#selector의-우선순위)
+  * [block level element vs. inline element](#block-level-element-vs-inline-element)
+  * [Box Model](#box-model)
+  * [Grid](#grid)
+  * [반응형 디자인](#반응형-디자인) 
+  * [CSS 코드의 재사용](#css-코드의-재사용)
 
 # HTML 
 
