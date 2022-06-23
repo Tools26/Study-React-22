@@ -181,11 +181,137 @@ HTML은 정보를, CSS는 디자인을 담당한다! CSS로 디자인 관련된 
 
 <img width="500px" src="https://user-images.githubusercontent.com/68090939/175229804-e909884e-eff7-4c8a-8ab2-bd700d917e8e.png">
 
-이처럼 Selector는 **id(#) > class(.) > tag** 이 순서대로 우선순위가 적용된다. 
+이처럼 Selector는 **id(#) > class(.) > tag(element)** 이 순서대로 우선순위가 적용된다. 
 
 왜 그럴까? 무작정 외우지 말고 직관적으로 이유를 생각해보자! 
 
 id는 코드 상에서 한번만 등장하며, 다른 값과 중복되지 않는 유일한 값이기 때문에 우선순위가 가장 높다. 반면에 클래스, 태그는 그보다 더 포괄적이기 때문에 id 선택자보다 우선순위가 낮은 것이다! 
 
 [더 많은 CSS Selector가 궁금하다면 클릭!](https://www.w3schools.com/cssref/css_selectors.asp)
+
+### block level element vs. inline element 
+
+```html
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Box Model</title>
+    <style>
+        /* block level element */
+        h1{
+            border-width: 3px;
+            border-color: red;
+            border-style: solid;
+        }
+        /* inline element */
+        a{
+            border-width: 3px;
+            border-color: red;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS</h1>
+    Cascading Style Sheets (<a href="https://en.wikipedia.org/wiki/CSS">CSS</a>) is a style sheet language 
+    used for describing the presentation of a document written in a markup language such as HTML or XML (including XML dialects such as SVG, MathML or XHTML).
+</body>
+</html>
+```
+
+<img width="500px" src="https://user-images.githubusercontent.com/68090939/175247246-0de54015-a6d7-496c-a0e4-d45d4718be84.png">
+
+h1과 같은 block level 태그는 화면 전체를 차지하며 자동으로 줄바꿈이 된다. 반면에 a와 같은 inline 태그는 자기 자신의 콘텐츠만큼만 크기를 차지한다. 
+
+```html
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Box Model</title>
+    <style>
+        /* block level element */
+        h1{
+            border-width: 3px;
+            border-color: red;
+            border-style: solid;
+            display: inline;
+        }
+        /* inline element */
+        a{
+            border-width: 3px;
+            border-color: red;
+            border-style: solid;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS</h1>
+    Cascading Style Sheets (<a href="https://en.wikipedia.org/wiki/CSS">CSS</a>) is a style sheet language 
+    used for describing the presentation of a document written in a markup language such as HTML or XML (including XML dialects such as SVG, MathML or XHTML).
+</body>
+</html>
+```
+
+<img width="500px" src="https://user-images.githubusercontent.com/68090939/175247780-4e0aabab-ffab-489c-ab31-8c17df02cf6a.png">
+
+하지만 display 속성 값에 따라서 차지하는 크기를 다르게 할 수 있다. 그리고 `display: none;`으로 설정하면 해당 태그가 아예 화면에 안 보이게 할 수도 있다! 
+
+```html
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Box Model</title>
+    <style>
+        h1, a{
+            border:3px solid red; /* 순서는 무관 */
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS</h1>
+    Cascading Style Sheets (<a href="https://en.wikipedia.org/wiki/CSS">CSS</a>) is a style sheet language 
+    used for describing the presentation of a document written in a markup language such as HTML or XML (including XML dialects such as SVG, MathML or XHTML).
+</body>
+</html>
+```
+
+중복된 코드를 줄이면 위와 같이 간단해진다! 
+
+### Box Model
+
+<img width="500px" src="https://user-images.githubusercontent.com/68090939/175249986-30cec941-206b-4850-aa4f-afe188842dbd.png">
+
+```html
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Box Model</title>
+    <style>
+        h1{
+            border:5px solid red;
+            padding:20px; /* 안쪽 여백 */
+            margin:20px;  /* 바깥 여백 */
+            display: block;
+            width:100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS</h1>
+    <h1>CSS</h1>
+</body>
+</html>
+```
+
+<img width="500px" src="https://user-images.githubusercontent.com/68090939/175250143-97acde6d-26b8-40d6-b73a-1a71b34c73ab.png">
+
+<img width="500px" src="https://user-images.githubusercontent.com/68090939/175251504-34d6fb3e-25e3-4738-9035-f9fd90246d4b.png">
+
+👉 개발자 도구로 확인해본 모습! 
+
+
+
+
+
 
