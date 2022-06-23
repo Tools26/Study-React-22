@@ -2,9 +2,16 @@
 
 기초 강의이기 때문에 모든 내용을 자세히 필기하지는 않고, 실습 위주로 강의를 들었다! 
 
-## HTML (Hypertext Markup Language)
+# 목차 
 
-### 태그와 속성 
+- [HTML (Hypertext Markup Language)](#html) 
+- [CSS (Cascading Style Sheets)](#css) 
+- [Grid](#grid) 
+- [반응형 디자인](#반응형-디자인) 
+
+# HTML 
+
+## 태그와 속성 
 
 ![image](https://user-images.githubusercontent.com/68090939/175207281-e9d2506d-75bb-4640-a698-835f288566d5.png)
 
@@ -28,12 +35,12 @@
 **자신도 모르는 사이에 누군가를 소외시키고 있는 것입니다. 반대로, HTML을 의미론적으로 잘 사용한다면 자신도 모르는 사이에 누군가에게 정말 큰 도움을 주고 있는 것입니다. 
 이렇게 HTML은 비즈니스적인 측면에서도 중요하지만, 휴머니즘적인 측면에서도 중요한 기술입니다.**
 
-### 서버와 클라이언트 
+## 서버와 클라이언트 
 
 - 서버 (Server): 서비스를 제공하는 사람 
 - 클라이언트 (Client): 정보를 받는 고객 
 
-### 웹호스팅 
+## 웹호스팅 
 
 - 호스트: 인터넷에 연결된 컴퓨터 하나하나 
 - 호스팅, 클라우드: 이런 컴퓨터들을 빌려주는 기술 
@@ -44,7 +51,7 @@
 >
 >→ 내가 무엇을 알고 있는지를 자신과 타인에게 확인시켜 줄 수 있는 너무나도 중요한 방법!!! 
 
-## CSS (Cascading Style Sheets) 
+# CSS 
 
 HTML은 정보를, CSS는 디자인을 담당한다! CSS로 디자인 관련된 코드를 한번에 처리하므로 HTML에서 비효율적으로 중복되는 코드를 제거할 수 있다. 즉, 유지보수가 편리해진다! 
 
@@ -52,7 +59,7 @@ HTML은 정보를, CSS는 디자인을 담당한다! CSS로 디자인 관련된 
 
 <img width="500px" src="https://user-images.githubusercontent.com/68090939/175209234-5b34c938-371b-4562-b324-1ac713dd3c61.png"> 
 
-### Selector의 우선순위 
+## Selector의 우선순위 
 
 ```html
 <!DOCTYPE html>
@@ -189,7 +196,7 @@ id는 코드 상에서 한번만 등장하며, 다른 값과 중복되지 않는
 
 [더 많은 CSS Selector가 궁금하다면 클릭!](https://www.w3schools.com/cssref/css_selectors.asp)
 
-### block level element vs. inline element 
+## block level element vs. inline element 
 
 ```html
 <!DOCTYPE html>
@@ -278,7 +285,7 @@ h1과 같은 block level 태그는 화면 전체를 차지하며 자동으로 �
 
 중복된 코드를 줄이면 위와 같이 간단해진다! 
 
-### Box Model
+## Box Model
 
 <img width="500px" src="https://user-images.githubusercontent.com/68090939/175249986-30cec941-206b-4850-aa4f-afe188842dbd.png">
 
@@ -310,7 +317,7 @@ h1과 같은 block level 태그는 화면 전체를 차지하며 자동으로 �
 
 👉 개발자 도구로 확인해본 모습! 
 
-## Grid 
+# Grid 
 
 ![image](https://user-images.githubusercontent.com/68090939/175256356-2e7a88ed-96df-44c4-93bc-fd7f1928b4fc.png) 
 
@@ -352,7 +359,7 @@ h1과 같은 block level 태그는 화면 전체를 차지하며 자동으로 �
 
 <br> 
 
-### Grid 이용해서 수정한 홈페이지의 모습! 
+## Grid 이용해서 수정한 홈페이지의 모습! 
 
 ![image](https://user-images.githubusercontent.com/68090939/175269003-6c12b437-5cb1-4265-84e0-a18c467c01df.png)
 
@@ -414,7 +421,7 @@ h1과 같은 block level 태그는 화면 전체를 차지하며 자동으로 �
 </html>
 ```
 
-## 반응형 디자인 
+# 반응형 디자인 
 
 
 
