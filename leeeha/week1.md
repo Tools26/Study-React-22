@@ -52,10 +52,140 @@ HTML은 정보를, CSS는 디자인을 담당한다! CSS로 디자인 관련된 
 
 <img width="500px" src="https://user-images.githubusercontent.com/68090939/175209234-5b34c938-371b-4562-b324-1ac713dd3c61.png"> 
 
+### Selector의 우선순위 
 
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB1 - CSS</title>
+        <meta charset="utf-8">
+        <style>
+            a {
+                color:black;
+                text-decoration: none;
+            }
+            .visited {
+                color: gray;
+            }
+            .active {
+                color: red;
+            }
+            h1 {
+                font-size: 45px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1><a href="index.html">WEB</a></h1>
+        <ol>
+            <li><a href="1.html" class="visited">HTML</a></li>
+            <li><a href="2.html" class="visited active">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+        </ol>
 
+        <h2>CSS</h2>
+        <p>
+            CSS specification 
+        </p>
+    </body>
+</html>
+```
 
+<img width="500px" src="https://user-images.githubusercontent.com/68090939/175229804-e909884e-eff7-4c8a-8ab2-bd700d917e8e.png">
 
+`<a href="2.html" class="visited active">CSS</a>` 이것처럼 class 속성이 여러 개일 경우 가장 마지막에 나올 수록 우선순위가 더 높다. 그래서 HTML은 회색, CSS는 빨간색으로 표시가 된 것이다. 하지만 이 방법은... 
 
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB1 - CSS</title>
+        <meta charset="utf-8">
+        <style>
+            a {
+                color:black;
+                text-decoration: none;
+            }
+            .active {
+                color: red;
+            }
+            .visited {
+                color: gray;
+            }
+            h1 {
+                font-size: 45px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1><a href="index.html">WEB</a></h1>
+        <ol>
+            <li><a href="1.html" class="visited">HTML</a></li>
+            <li><a href="2.html" class="visited active">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+        </ol>
 
+        <h2>CSS</h2>
+        <p>
+            CSS specification 
+        </p>
+    </body>
+</html>
+```
+
+<img width="500px" src="https://user-images.githubusercontent.com/68090939/175230429-172a9638-a44d-44f4-8de5-038e162d950d.png">
+
+이렇게 active, visited 클래스 선택자의 작성 순서가 바뀌면, body 태그에서 더 가까운 선택자가 우선적으로 적용되어서 CSS가 회색으로 나타난다. 그래서 이것보다 다른 방법을 사용하는 게 좋다! 바로 id 속성을 이용하는 것이다! 
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB1 - CSS</title>
+        <meta charset="utf-8">
+        <style>
+            #active { 
+                color: red;
+            } 
+            .visited {
+                color: gray;
+            }
+            a {
+                color:black;
+                text-decoration: none;
+            }
+            h1 {
+                font-size: 45px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1><a href="index.html">WEB</a></h1>
+        <ol>
+            <li><a href="1.html" class="visited">HTML</a></li>
+            <li><a href="2.html" class="visited" id="active">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+        </ol>
+
+        <h2>CSS</h2>
+        <p>
+            CSS specification 
+        </p>
+    </body>
+</html>
+```
+
+<img width="500px" src="https://user-images.githubusercontent.com/68090939/175229804-e909884e-eff7-4c8a-8ab2-bd700d917e8e.png">
+
+이처럼 Selector는 **id(#) > class(.) > tag** 이 순서대로 우선순위가 적용된다. 
+
+왜 그럴까? 무작정 외우지 말고 직관적으로 이유를 생각해보자! 
+
+id는 코드 상에서 한번만 등장하며, 다른 값과 중복되지 않는 유일한 값이기 때문에 우선순위가 가장 높다. 반면에 클래스, 태그는 그보다 더 포괄적이기 때문에 id 선택자보다 우선순위가 낮은 것이다! 
+
+[더 많은 CSS Selector가 궁금하다면 클릭!](https://www.w3schools.com/cssref/css_selectors.asp)
 
