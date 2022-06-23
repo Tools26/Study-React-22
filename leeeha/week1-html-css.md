@@ -194,7 +194,7 @@ HTML은 정보를, CSS는 디자인을 담당한다! CSS로 디자인 관련된 
 
 왜 그럴까? 무작정 외우지 말고 직관적으로 이유를 생각해보자! 
 
-id는 코드 상에서 한번만 등장하며, 다른 값과 중복되지 않는 유일한 값이기 때문에 우선순위가 가장 높다. 반면에 클래스, 태그는 그보다 더 포괄적이기 때문에 id 선택자보다 우선순위가 낮은 것이다! 
+id는 코드 상에서 한번만 등장하며, 다른 값과 중복되지 않는 유일한 값이기 때문에 우선순위가 가장 높다. 반면에 클래스, 태그는 그보다 더 포괄적이므로 id 선택자보다 우선순위가 낮은 것이다! 
 
 [더 많은 CSS Selector가 궁금하다면 클릭!](https://www.w3schools.com/cssref/css_selectors.asp)
 
@@ -425,8 +425,166 @@ h1과 같은 block level 태그는 화면 전체를 차지하며 자동으로 �
 
 ## 반응형 디자인 
 
-https://opentutorials.org/course/3086/18323 
+### 미디어 쿼리 소개 
+
+```html
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Media Query</title>
+    <style>
+        div{
+            border:10px solid green;
+            font-size:60px;
+        }
+        /* screen width > 800px -> min-width:800px */
+        /* screen width < 800px -> max-width:800px */
+        @media(max-width:800px){
+            div{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Responsive
+    </div>
+</body>
+</html>
+```
+
+![image](https://user-images.githubusercontent.com/68090939/175327941-9b3220d9-be83-406f-a1da-edc57c150470.png)
+
+![image](https://user-images.githubusercontent.com/68090939/175328039-b912dfec-3e0b-4777-a015-b020eabdbb2f.png)
+
+미디어 쿼리를 이용하면, 화면 크기에 따라서 태그의 display를 동적으로 변경할 수 있다! 
+
+### 미디어 쿼리 적용하기 
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB1 - CSS</title>
+        <meta charset="utf-8">
+        <style>
+            body{
+                margin: 0;
+            }
+            h1{
+                font-size: 45px;
+                text-align: center;
+                border-bottom: 1px solid gray;
+                margin: 0;
+                padding:20px;
+            }
+            a{
+                color:black;
+                text-decoration: none;
+            }
+            #grid{
+                display:grid;
+                grid-template-columns: 150px 1fr;
+            }
+            #grid ol{
+                border-right:1px solid gray;
+                width:100px;
+                margin:0;
+                padding:20px;
+                padding-left:33px;
+            }
+            #grid #article{
+                padding-left: 25px;
+            }
+            /* 800px 보다 크기가 작아지면 display를 grid에서 block으로 바꾸고, 검정색 테두리 선 없애기 */
+            @media(max-width:800px){
+                #grid{
+                    display: block;
+                }
+                #grid ol{
+                    border-right:none;
+                }
+                h1{
+                    border-bottom: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1><a href="index.html">WEB</a></h1>
+        <div id="grid">
+            <ol>
+                <li><a href="1.html">HTML</a></li>
+                <li><a href="2.html">CSS</a></li>
+                <li><a href="3.html">JavaScript</a></li>
+            </ol>
+            <div id="article">
+                <h2>CSS</h2>
+                <p>Cascading Style Sheets (CSS) is a style sheet language 
+                    used for describing the presentation of a document written in a markup language 
+                    such as HTML or XML (including XML dialects such as SVG, MathML or XHTML).[1] 
+                    CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2]
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
+```
+
+<img width="500px" src="https://user-images.githubusercontent.com/68090939/175332059-d11167b7-6e88-45eb-bf40-969b9fcbc51d.png">
+
+![image](https://user-images.githubusercontent.com/68090939/175332107-803c0120-63db-463f-beb3-2c795daee049.png)
 
 ## CSS 코드의 재사용 
 
+html 파일에 있던 style 태그의 내용을 style.css 라는 새 파일에 전부 옮긴 다음에, 그 자리에 `<link rel="stylesheet" href="style.css">` 이 코드 한 줄만 작성해주면 내부적으로 html에서 style.css 파일을 다운 받아 보여주게 된다! html 파일에서 중복되던 코드를 없애고 그것을 전부 style.css 코드에서 처리하니까 훨씬 효율적이다!   
 
+```css
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 45px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin: 0;
+    padding: 20px;
+}
+
+a {
+    color: black;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+
+#grid ol {
+    border-right: 1px solid gray;
+    width: 100px;
+    margin: 0;
+    padding: 20px;
+    padding-left: 33px;
+}
+
+#grid #article {
+    padding-left: 25px;
+}
+
+@media(max-width:800px) {
+    #grid {
+        display: block;
+    }
+
+    #grid ol {
+        border-right: none;
+    }
+
+    h1 {
+        border-bottom: none;
+    }
+}
+```
