@@ -1,4 +1,8 @@
-# 생활코딩 HTML/CSS/JS 요약 
+# 생활코딩 HTML/CSS 강의 요약 
+
+https://opentutorials.org/course/3084 (HTML)
+
+https://opentutorials.org/course/3086 (CSS) 
 
 기초 강의이기 때문에 모든 내용을 자세히 필기하지는 않고, 실습 위주로 강의를 들었다! 
 
@@ -6,7 +10,6 @@
 
 - [HTML (Hypertext Markup Language)](#html) 
 - [CSS (Cascading Style Sheets)](#css) 
-- [JavaScript](#javascript) 
 
 # HTML 
 
@@ -422,12 +425,8 @@ h1과 같은 block level 태그는 화면 전체를 차지하며 자동으로 �
 
 ## 반응형 디자인 
 
+
+
 ## CSS 코드의 재사용 
-
-# JavaScript 
-
-
-
-
 
 
