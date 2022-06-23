@@ -58,7 +58,7 @@
         <a href="https://github.com/juijeong8324"><img src="https://avatars.githubusercontent.com/u/63052097?v=4" width="150px" alt="전의정"/><br /><sub><b>전의정</b></sub></a>
      </td>
     <td align="center">
-    <a href="https://github.com/leeeha"><img src="https://avatars.githubusercontent.com/u/81352045?v=4" width="150px;" alt="이하은"/><br /><sub><b>이하은</b></sub></a><br />
+    <a href="https://github.com/leeeha"><img src="https://avatars.githubusercontent.com/u/68090939?v=4" width="150px;" alt="Haeun Lee"/><br /><sub><b>Haeun Lee</b></sub></a><br />
     </td>
      <td align="center">
         <a href="https://github.com/hchbae1001"><img src="https://avatars.githubusercontent.com/u/50735594?v=4" width="150px" alt="배현철"/><br /><sub><b>배현철</b></sub></a>
