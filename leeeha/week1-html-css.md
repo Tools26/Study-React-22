@@ -425,7 +425,7 @@ h1과 같은 block level 태그는 화면 전체를 차지하며 자동으로 �
 
 ## 반응형 디자인 
 
-
+https://opentutorials.org/course/3086/18323 
 
 ## CSS 코드의 재사용 
 
