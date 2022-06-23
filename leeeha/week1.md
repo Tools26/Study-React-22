@@ -6,8 +6,7 @@
 
 - [HTML (Hypertext Markup Language)](#html) 
 - [CSS (Cascading Style Sheets)](#css) 
-- [Grid](#grid) 
-- [반응형 디자인](#반응형-디자인) 
+- [JavaScript](#javascript) 
 
 # HTML 
 
@@ -317,7 +316,7 @@ h1과 같은 block level 태그는 화면 전체를 차지하며 자동으로 �
 
 👉 개발자 도구로 확인해본 모습! 
 
-# Grid 
+## Grid 
 
 ![image](https://user-images.githubusercontent.com/68090939/175256356-2e7a88ed-96df-44c4-93bc-fd7f1928b4fc.png) 
 
@@ -359,7 +358,7 @@ h1과 같은 block level 태그는 화면 전체를 차지하며 자동으로 �
 
 <br> 
 
-## Grid 이용해서 수정한 홈페이지의 모습! 
+### Grid 이용해서 수정한 홈페이지의 모습! 
 
 ![image](https://user-images.githubusercontent.com/68090939/175269003-6c12b437-5cb1-4265-84e0-a18c467c01df.png)
 
@@ -421,9 +420,11 @@ h1과 같은 block level 태그는 화면 전체를 차지하며 자동으로 �
 </html>
 ```
 
-# 반응형 디자인 
+## 반응형 디자인 
 
+## CSS 코드의 재사용 
 
+# JavaScript 
 
 
 
