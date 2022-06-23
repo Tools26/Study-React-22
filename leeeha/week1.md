@@ -310,6 +310,114 @@ h1과 같은 block level 태그는 화면 전체를 차지하며 자동으로 �
 
 👉 개발자 도구로 확인해본 모습! 
 
+## Grid 
+
+![image](https://user-images.githubusercontent.com/68090939/175256356-2e7a88ed-96df-44c4-93bc-fd7f1928b4fc.png) 
+
+**div 태그는 block level element**여서 화면 전체를 차지하며 자동 줄바꿈이 된다. 반면에 **span 태그**는 기능이 동일하지만, 자기 자신의 내용만큼만 크기를 차지하는 **inline element**라는 차이점이 있다.
+
+```html
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Grid</title>
+    <style>
+        #grid{
+            border:5px solid pink;
+            display:grid;
+            grid-template-columns: 150px 1fr;
+        }
+        div{
+            border:5px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="grid">
+        <div>NAVIGATION</div>
+        <div>
+            Creative thinking requires our brains to make connections between seemingly unrelated ideas. 
+            Is this a skill that we are born with or one that we develop through practice? 
+            Let's look at the research to uncover an answer.
+        </div>
+    </div>
+</body>
+</html>
+```
+
+![image](https://user-images.githubusercontent.com/68090939/175260720-f8f3b341-e2b7-4d56-9c42-92ee398ce946.png)
+
+📌 **유용한 웹 사이트 추천**: https://caniuse.com/ 
+> "Can I use" provides up-to-date browser support tables for support of front-end web technologies on desktop and mobile web browsers.
+
+<br> 
+
+### Grid 이용해서 수정한 홈페이지의 모습! 
+
+![image](https://user-images.githubusercontent.com/68090939/175269003-6c12b437-5cb1-4265-84e0-a18c467c01df.png)
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB1 - CSS</title>
+        <meta charset="utf-8">
+        <style>
+            body{
+                margin: 0;
+            }
+            h1{
+                font-size: 45px;
+                text-align: center;
+                border-bottom: 1px solid gray;
+                margin: 0;
+                padding:20px;
+            }
+            a{
+                color:black;
+                text-decoration: none;
+            }
+            #grid{
+                display:grid;
+                grid-template-columns: 150px 1fr;
+            }
+            #grid ol{
+                border-right:1px solid gray;
+                width:100px;
+                margin:0;
+                padding:20px;
+                padding-left:33px;
+            }
+            #article{
+                padding-left: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1><a href="index.html">WEB</a></h1>
+        <div id="grid">
+            <ol>
+                <li><a href="1.html">HTML</a></li>
+                <li><a href="2.html">CSS</a></li>
+                <li><a href="3.html">JavaScript</a></li>
+            </ol>
+            <div id="article">
+                <h2>CSS</h2>
+                <p>Cascading Style Sheets (CSS) is a style sheet language 
+                    used for describing the presentation of a document written in a markup language 
+                    such as HTML or XML (including XML dialects such as SVG, MathML or XHTML).[1] 
+                    CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2]
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
+```
+
+## 반응형 디자인 
+
+
+
 
 
 
