@@ -2,8 +2,6 @@
 
 https://opentutorials.org/course/3085 
 
-→ 최소한으로 배워서 최대한 써먹자! 
-
 - 자바스크립트는 사용자와 상호작용하기 위해 만들어진 언어이다. 
 - 웹 브라우저는 한번 화면에 출력되면 자기 자신을 바꿀 수 없다. 하지만 자바스크립트로 html 코드를 제어할 수 있다! 사용자의 동작에 따라 달라지는 동적인 웹 페이지를 만들 수 있는 것이다! 
 
@@ -169,8 +167,123 @@ body 태그 안에 아래의 자바스크립트 코드 삽입해서, 사용자�
 ">
 ```
 
+## 배열과 반복문으로 a 태그의 style 속성 값 바꾸기 
+
+```html
+<input type="button" value="night" onclick="
+    var target = document.querySelector('body')
+    if(this.value === 'night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            alist[i].style.color = 'powderblue';
+            i++;
+        }
+    }else{ 
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            alist[i].style.color = 'blue';
+            i++;
+        }
+    }
+">
+```
+
+![image](https://user-images.githubusercontent.com/68090939/175765100-a2f147f2-ced5-4b2b-856b-209e2f90a6a9.png)
+
+![image](https://user-images.githubusercontent.com/68090939/175765107-95a28a41-fa1c-461e-b43f-baca8b2b8b1e.png)
+
+## 함수 
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEB1 - JavaScript</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function nightDayHandler(self){
+            var target = document.querySelector('body')
+            if(self.value === 'night'){
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                self.value = 'day';
+
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while(i < alist.length){
+                    alist[i].style.color = 'powderblue';
+                    i++;
+                }
+            }else{ 
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+                self.value = 'night';
+
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while(i < alist.length){
+                    alist[i].style.color = 'blue';
+                    i++;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input id="night_day" type="button" value="night" onclick="
+        nightDayHandler(this);
+    ">
+
+    <input id="night_day" type="button" value="night" onclick="
+        nightDayHandler(this);
+    ">
+
+    <h1><a href="index.html">WEB</a></h1>
+
+    <div id="grid">
+        <ol>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+        </ol>
+        <div id="article">
+            <h2>JavaScript</h2>
+            <p>
+                JavaScript, often abbreviated JS, is a programming language that is one of the
+                core technologies of the World Wide Web, alongside HTML and CSS.[11] As of 2022, 98% of websites use
+                JavaScript on the client side for web page behavior,[12] often incorporating third-party libraries.[13]
+                All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
+```
+
+중복을 제거하는 데 효과적인 함수! 
+
+## 객체 
 
 
+
+# 라이브러리와 프레임워크 
+
+# UI vs API 
 
 
 
