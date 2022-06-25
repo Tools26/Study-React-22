@@ -286,19 +286,290 @@ body 태그 안에 아래의 자바스크립트 코드 삽입해서, 사용자�
 
 ## 객체 
 
+### 객체 기본 사용법 
+
+```html
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Object</h1>
+
+    <h2>Create</h2>
+    <script>
+        /* 객체 생성 */
+        var coworkers = {
+            "programmer":"egoing",
+            "designer":"leezche"
+        };
+
+        /* 객체 접근 */
+        document.write("programmer: " + coworkers.programmer + "<br>");
+        document.write("designer: " + coworkers.designer + "<br>");
 
 
+        /* 객체 추가 */
+        coworkers.bookkeeper = "duru";
+        document.write("bookkeeper: " + coworkers.bookkeeper + "<br>");
 
-# 라이브러리와 프레임워크 
+        coworkers["data scientist"] = "taeho"; /* key 값에 띄어쓰기가 있는 경우 */
+        document.write("data scientist: " + coworkers["data scientist"] + "<br>");
+    </script>
 
+    <h2>Iterate</h2>
+    <script>
+        /* 객체 순회 */
+        for(var key in coworkers){
+            document.write(key + ' : '  + coworkers[key] + '<br>');
+        }
+    </script>
 
+    <h2>Property & Method</h2>
+    <script>
+        /* 함수 정의 */
+        coworkers.showAll = function(){
+            for(var key in this){
+                document.write(key + ' : '  + this[key] + '<br>');
+            }
+        }
 
-# UI vs API 
+        /* 함수 호출 */
+        coworkers.showAll();
+    </script>
+</body>
+</html>
+```
 
+![image](https://user-images.githubusercontent.com/68090939/175769288-0017bb4d-25a3-4ae8-9c82-f15b5068bb30.png)
 
+### 객체 활용
 
+```html
+<!DOCTYPE html>
+<html>
 
+<head>
+    <title>WEB1 - JavaScript</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
 
+    <script>
+        function nightDayHandler(self){
+            var target = document.querySelector('body')
+            if(self.value === 'night'){
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                self.value = 'day';
 
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while(i < alist.length){
+                    alist[i].style.color = 'powderblue';
+                    i++;
+                }
+            }else{ 
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+                self.value = 'night';
 
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while(i < alist.length){
+                    alist[i].style.color = 'blue';
+                    i++;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input id="night_day" type="button" value="night" onclick="
+        nightDayHandler(this);
+    ">
+
+    <input id="night_day" type="button" value="night" onclick="
+        nightDayHandler(this);
+    ">
+
+    <h1><a href="index.html">WEB</a></h1>
+
+    <div id="grid">
+        <ol>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+        </ol>
+        <div id="article">
+            <h2>JavaScript</h2>
+            <p>
+                JavaScript, often abbreviated JS, is a programming language that is one of the
+                core technologies of the World Wide Web, alongside HTML and CSS.[11] As of 2022, 98% of websites use
+                JavaScript on the client side for web page behavior,[12] often incorporating third-party libraries.[13]
+                All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
+```
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEB1 - JavaScript</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function LinksSetColor(color){
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                alist[i].style.color = color;
+                i++;
+            }
+        }
+
+        function BodySetColor(color){
+            document.querySelector('body').style.color = color;
+        }
+
+        function BodySetBackgroundColor(color){
+            document.querySelector('body').style.backgroundColor = color;
+        }
+
+        function nightDayHandler(self){
+            var target = document.querySelector('body')
+            if(self.value === 'night'){
+                BodySetBackgroundColor('black');
+                BodySetColor('white');
+                self.value = 'day';
+                LinksSetColor('powderblue');
+            }else{ 
+                BodySetBackgroundColor('white');
+                BodySetColor('black');
+                self.value = 'night';
+                LinksSetColor('blue');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input id="night_day" type="button" value="night" onclick="
+        nightDayHandler(this);
+    ">
+
+    <h1><a href="index.html">WEB</a></h1>
+
+    <div id="grid">
+        <ol>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+        </ol>
+        <div id="article">
+            <h2>JavaScript</h2>
+            <p>
+                JavaScript, often abbreviated JS, is a programming language that is one of the
+                core technologies of the World Wide Web, alongside HTML and CSS.[11] As of 2022, 98% of websites use
+                JavaScript on the client side for web page behavior,[12] often incorporating third-party libraries.[13]
+                All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
+```
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEB1 - JavaScript</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        var Body = {
+            setColor:function(color){
+                document.querySelector('body').style.color = color;
+            },
+            setBackgroundColor:function(color){
+                document.querySelector('body').style.backgroundColor = color;
+            }
+        }
+
+        var Links = {
+            setColor:function(color){
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while(i < alist.length){
+                    alist[i].style.color = color;
+                    i++;
+                }
+            }
+        }
+
+        function nightDayHandler(self){
+            var target = document.querySelector('body')
+            if(self.value === 'night'){
+                Body.setBackgroundColor('black');
+                Body.setColor('white');
+                self.value = 'day';
+
+                Links.setColor('powderblue');
+            }else{ 
+                Body.setBackgroundColor('white');
+                Body.setColor('black');
+                self.value = 'night';
+
+                Links.setColor('blue');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input id="night_day" type="button" value="night" onclick="
+        nightDayHandler(this);
+    ">
+
+    <h1><a href="index.html">WEB</a></h1>
+
+    <div id="grid">
+        <ol>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+        </ol>
+        <div id="article">
+            <h2>JavaScript</h2>
+            <p>
+                JavaScript, often abbreviated JS, is a programming language that is one of the
+                core technologies of the World Wide Web, alongside HTML and CSS.[11] As of 2022, 98% of websites use
+                JavaScript on the client side for web page behavior,[12] often incorporating third-party libraries.[13]
+                All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
+```
+
+# 파일로 쪼개서 정리정돈 하기 
+
+https://opentutorials.org/course/3085/18856
+
+https://github.com/leeeha/my-first-web-site → 전체 코드 확인! 
+
+https://leeeha.github.io/my-first-web-site/ → GitHub Pages 기능을 이용해서 웹사이트 호스팅한 거 확인!
 
