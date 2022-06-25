@@ -9,8 +9,7 @@ https://opentutorials.org/course/3085
 
 - [HTML과 JavaScript의 만남](#html과-javascript의-만남)
 - [기본 문법](#기본-문법)
-- [라이브러리와 프레임워크](#라이브러리와-프레임워크)
-- [UI vs API](#ui-vs-api)
+- [파일로 쪼개서 정리정돈 하기](파일로-쪼개서-정리정돈-하기) 
 
 # HTML과 JavaScript의 만남 
 
