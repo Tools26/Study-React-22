@@ -10,6 +10,7 @@ https://opentutorials.org/course/3085
 - [HTML과 JavaScript의 만남](#html과-javascript의-만남)
 - [기본 문법](#기본-문법)
 - [파일로 쪼개서 정리정돈 하기](#파일로-쪼개서-정리정돈-하기) 
+- [jQuery 사용해보기](#jQuery-사용해보기) 
 
 # HTML과 JavaScript의 만남 
 
@@ -572,3 +573,45 @@ https://github.com/leeeha/my-first-web-site → 전체 코드 확인!
 
 https://leeeha.github.io/my-first-web-site/ → GitHub Pages 기능을 이용해서 웹사이트 호스팅한 거 확인!
 
+# jQuery 사용해보기 
+
+https://developers.google.com/speed/libraries#indefinite-observable
+
+`<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>`
+
+https://api.jquery.com/css/ → jQuery 이용해서 css 속성 변경하기 
+
+```html
+<head>
+    <title>WEB1 - JavaScript</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="colors.js"></script>
+</head>
+```
+
+```html
+var Body = {
+    setColor:function(color){
+        //document.querySelector('body').style.color = color;
+        $('body').css('color', color);
+    },
+    setBackgroundColor:function(color){
+        //document.querySelector('body').style.backgroundColor = color;
+        $('body').css('backgroundColor', color);
+    }
+}
+
+var Links = {
+    setColor:function(color){
+        // var alist = document.querySelectorAll('a');
+        // var i = 0;
+        // while(i < alist.length){
+        //     alist[i].style.color = color;
+        //     i++;
+        // }
+        $('a').css('color', color);
+    }
+}
+```
