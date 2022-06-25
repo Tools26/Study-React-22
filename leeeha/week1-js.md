@@ -135,6 +135,44 @@ body 태그 안에 아래의 자바스크립트 코드 삽입해서, 사용자�
 ">
 ``` 
 
+## 리팩토링 
+
+```html
+<input id="night_day" type="button" value="night" onclick="
+    if(document.querySelector('#night_day').value === 'night'){
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('#night_day').value = 'day';
+    }else{
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.querySelector('#night_day').value = 'night';
+    }
+">
+```
+
+위의 코드를 더 간결하게 바꿔보자! 동일한 버튼을 1억개 만들어야 하는, 극단적인 상황을 가정해서 생각해보면 중복된 코드들을 왜 없애야 하는지 이해할 수 있을 것이다. 
+
+```html
+<input type="button" value="night" onclick="
+    /* 같은 단어를 모두 선택하는 단축키: Ctrl + Shift + L */
+    var target = document.querySelector('body')
+    if(this.value === 'night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+    }else{
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+    }
+">
+```
+
+
+
+
+
 
 
 
