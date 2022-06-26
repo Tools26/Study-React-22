@@ -11,7 +11,7 @@ Web browser 에서 주로 작동, 다른 응용 프로그램의 내장 객체에
 속성과 메소드를 갖는 객체(obejct) 개념이 있으며, 변수 선언, 함수 정의, 연산자 그리고 제어문 등을 이 프로그래밍 언어의
 주요 개념으로 언급할 수 있을뿐만 아니라 이 언어가 속한 객체 지향 프로그래밍언어의 공통적인 주요 개념이기도 하다.
 
-# 변수 선언
+- 변수 선언
 기본적으로 C나 Java 등 타 언어에서는 변수를 선언할때, 형태를 정해준다. 예를들어 Integer, Double, Boolean 등이 있는데,
 JavaScript에서는 변수를 선언 할 때, let var const 등이 사용된다.
 즉,  Int 형 3 과 String 형 '3' 이 있다 가정한다.
@@ -20,7 +20,7 @@ JavaScript에서는 변수를 선언 할 때, let var const 등이 사용된다.
 JavaScript는 Dynamic Typing 기능을 가지고 있기 때문에
 3 + '3' 을 진행한다면 Javascript는 6을 반환한다.
 
-## Dynamic Typing 
+* Dynamic Typing 
 Dynamic Typing은 Code를 작성하는데 있어서 컴퓨터적 구조를 생략한다.
 따라서 변수를 지정할 때 해당 변수의 데이터 타입 등을 명시하지 않아도 컴퓨터가 알아서 해석하도록 한다.
 장점 : 코드를 간결하게 해주어 로직을 보다 명확히 보여줄 수 있다.
