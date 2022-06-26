@@ -3,9 +3,17 @@
 1. 브라우저
 2. Local 개발 환경
    1. node를 설치한다. 이때, lts 버전이나 최신 버전을 다운받는걸 추천함. v16.13.2
-   2. 터미널을 열고 아래 명령어를 입력한다.
-   3. npx create-react-app 폴더이름
-   4. npm start로 App.js에서 변경한 사항이 반영됨.
+   2. 
+   ![image](https://user-images.githubusercontent.com/72017202/175800410-e62ea9eb-7a01-4834-a169-51b04898f7b5.png)
+
+   3. 터미널을 열고 아래 명령어를 입력한다.
+   4. npx create-react-app 폴더이름
+   5. npm start로 동작함
+
+![image](https://user-images.githubusercontent.com/72017202/175800488-b0da4d9e-32e4-4b32-89f3-515d36c7e527.png)
+
+   ![image](https://user-images.githubusercontent.com/72017202/175800458-95edfc3e-3d7a-4f19-9989-382c36797b7f.png)
+
 
 # Tutorial
 ## what is the react
