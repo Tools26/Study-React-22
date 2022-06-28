@@ -1,5 +1,16 @@
 # 내가 공부하려고 시작하는 React 스터디 
-- 키워드 : 함수형 컴포넌트, React Hook, React Dom, TypeScript    
+- 키워드 : 함수형 컴포넌트, React Hook, React Dom, TypeScript
+
+<br>
+<br>
+
+- 꿀팁 전수               
+React LifeCycle Hook기반이랑 class 기반이 다르다.                
+map method              
+전개 함수(Redux)                
+const [date,setDate] = useState(0)           
+styled component 추천(css보다!)                  
+
 <br>
 <br>
 
