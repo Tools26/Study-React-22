@@ -43,7 +43,7 @@ styled component 추천(css보다!)
 
 |주차|내용|인증|
 |:---:|---|---|
-|1주차|- [자바스크립트에 대해서](https://dev.to/nsebhastian/javascript-basics-before-you-learn-react-38en)<br>- 3번자료 Tutorial Overview까지 정리| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철](https://github.com/Tools26/Study-React-22/tree/main/hch/week1) [김연수](https://github.com/dustnehowl/React_study) |
+|1주차|- [자바스크립트에 대해서](https://dev.to/nsebhastian/javascript-basics-before-you-learn-react-38en)<br>- 3번자료 Tutorial Overview까지 정리| [전의정](https://velog.io/@juijeong8324/React-Javascript-Basics-Before-Learning-react) [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철](https://github.com/Tools26/Study-React-22/tree/main/hch/week1) [김연수](https://github.com/dustnehowl/React_study) |
 |2주차|- 1번자료 강좌 1~5번 섹션 수강<br> - 3번자료 Main concepts 6번까지| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철]() [김연수]() |
 |3주차|- 1번자료 강좌 6~13번 섹션 수강 <br> - 3번자료 Main concepts 끝까지| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철]() [김연수]() |
 |4주차|- 2번자료 1장 15번까지 <br> - 3번자료 Hooks 1~3번| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철]() [김연수]() |
