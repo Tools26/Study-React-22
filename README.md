@@ -44,14 +44,14 @@ styled component 추천(css보다!)
 |주차|내용|인증|
 |:---:|---|---|
 |1주차|- [자바스크립트에 대해서](https://dev.to/nsebhastian/javascript-basics-before-you-learn-react-38en)<br>- 3번자료 Tutorial Overview까지 정리| [전의정](https://velog.io/@juijeong8324/React-Javascript-Basics-Before-Learning-react) [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철](https://github.com/Tools26/Study-React-22/tree/main/hch/week1) [김연수](https://github.com/dustnehowl/React_study) |
-|2주차|- 1번자료 강좌 1~5번 섹션 수강<br> - 3번자료 Main concepts 6번까지| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철]() [김연수]() |
-|3주차|- 1번자료 강좌 6~13번 섹션 수강 <br> - 3번자료 Main concepts 끝까지| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철]() [김연수]() |
-|4주차|- 2번자료 1장 15번까지 <br> - 3번자료 Hooks 1~3번| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철]() [김연수]() |
-|5주차|- 2번자료 1장 끝까지 <br> - 3번자료 Hooks 4~7번| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철]() [김연수]() |
-|6주차|- 2번자료 2장, 3장 <br> - 3번자료 Advanced| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철]() [김연수]() |
-|7주차|- 2번자료 4장, 5장 <br> - 3번자료 Advanced| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철]() [김연수]() |
-|8주차|- 2번자료 6장 <br> - 3번자료 Advanced| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철]() [김연수]() |
-|9주차|- 2번자료 7장, 8장 <br> - 3번자료 Advanced| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철]() [김연수]() |
+|2주차|- 1번자료 강좌 1~5번 섹션 수강<br> - 3번자료 Main concepts 6번까지| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철]() [김연수](https://github.com/dustnehowl/React_study) |
+|3주차|- 1번자료 강좌 6~13번 섹션 수강 <br> - 3번자료 Main concepts 끝까지| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철]() [김연수](https://github.com/dustnehowl/React_study) |
+|4주차|- 2번자료 1장 15번까지 <br> - 3번자료 Hooks 1~3번| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철]() [김연수](https://github.com/dustnehowl/React_study) |
+|5주차|- 2번자료 1장 끝까지 <br> - 3번자료 Hooks 4~7번| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철]() [김연수](https://github.com/dustnehowl/React_study) |
+|6주차|- 2번자료 2장, 3장 <br> - 3번자료 Advanced| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철]() [김연수](https://github.com/dustnehowl/React_study) |
+|7주차|- 2번자료 4장, 5장 <br> - 3번자료 Advanced| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철]() [김연수](https://github.com/dustnehowl/React_study) |
+|8주차|- 2번자료 6장 <br> - 3번자료 Advanced| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철]() [김연수](https://github.com/dustnehowl/React_study) |
+|9주차|- 2번자료 7장, 8장 <br> - 3번자료 Advanced| [전의정]() [이하은](https://github.com/Tools26/Study-React-22/blob/main/leeeha) [배현철]() [김연수](https://github.com/dustnehowl/React_study) |
 
 10주차 11주차는 홈페이지 개발을 위해 남겨둘 예정.. 
 
