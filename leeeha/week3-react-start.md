@@ -86,7 +86,7 @@ webpack compiled successfully
 
 # 리액트 맛보기 
 
-## 리액트의 디렉토리 구조 이해하기
+## 코딩 - 실행 - 배포 
 
 ### JavaScript 파일 수정하기 
 
@@ -173,7 +173,64 @@ export default App;
 
 ### 배포 (deploy) 
 
+![image](https://user-images.githubusercontent.com/68090939/177778817-acd9582f-f271-4aad-89b9-53ff6046f44e.png)
 
+`npm run start` 명령어를 터미널에 입력하여 앱을 실행했을 때, 용량이 1.7MB라는 것을 확인할 수 있다. 브라우저에 들어간 내용도 별로 없는데,,, 1.7MB나 차지한다는 건 비효율적이다. 
+
+그 이유는 리액트가 개발의 편의성을 위해 여러가지 기능들을 추가해놓은 상태이기 때문이다. 하지만 사용자들이 이러한 무거운 용량을 사용하게 할 수 없고, 여러 보안적인 문제도 발생할 수 있다. 
+
+따라서, 다음 명령어를 입력하여 프로덕션 레벨의 어플리케이션을 만들어보자. 즉, 빌드를 해보자! 
+
+`npm run build` 
+
+```
+PS C:\Users\USER\Desktop\react-app> npm run build
+
+> react-app@0.1.0 build
+> react-scripts build
+
+Creating an optimized production build...
+Compiled successfully.
+
+File sizes after gzip:
+
+  47 kB    build\static\js\main.28271e35.js
+  1.78 kB  build\static\js\787.b701888c.chunk.js
+  20 B     build\static\css\main.31d6cfe0.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+```
+
+이전에는 없던 "build" 폴더가 생성된 걸 볼 수 있다! 
+
+![image](https://user-images.githubusercontent.com/68090939/177780285-e40c743c-1aac-4ca5-9198-c46737274fd5.png)
+
+이 디렉토리 안의 index.html 파일을 확인해보면 공백이 하나도 없는데, 그 이유는 create-react-app이 실제 프로덕션 환경에서 사용되는 앱을 만들기 위해 index.html 파일에서 공백과 같이 불필요하게 용량을 차지하는 정보를 제거했기 때문이다.
+
+결론적으로 실제 서비스를 할 때는 build 폴더 안에 있는 파일들을 사용한다. 웹 서버가 문서를 찾는 최상위 디렉토리 "Document root"에 build 디렉토리 안에 있는 파일들을 위치시키는 것이다. 이 과정을 통해 실서버 환경이 완성된다! 
+
+`npm install -g serve` 
+
+`npx serve -s build`
+
+위의 명령어를 입력하면 npm을 통해 웹서버를 간단히 설치할 수 있다. (npx는 한번만 실행시킬 웹서버 설치, -s build 옵션은 build라는 디렉토리를 document root로 하는 옵션)
+
+![image](https://user-images.githubusercontent.com/68090939/177782777-ae91e582-427f-45a6-b35c-94f789e100bc.png)
+
+![image](https://user-images.githubusercontent.com/68090939/177783423-38e6a2b7-75e2-4352-a0fd-083f4254d6a0.png)
+
+개발 환경의 앱과 동작하는 모습은 똑같지만, 개발자 도구의 네트워크 탭에서 다시 용량을 확인해보면 156kB로 줄어든 것을 확인할 수 있다!  
 
 ### 리액트가 없다면 
 
