@@ -378,6 +378,7 @@ class Subject extends Component {
 class TOC extends Component { // Table Of Content (목차) 
   render(){
     return(
+      // jsx라는 문법 덕분에 js 파일에 html 태그를 넣을 수 있음. 
       <nav>
         <ul>
             <li><a href="1.html">HTML</a></li>
