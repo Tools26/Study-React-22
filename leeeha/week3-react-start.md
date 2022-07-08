@@ -1,8 +1,14 @@
 # 웹 프론트엔드 입문 (리액트, 리덕스) 
 
-강의 자료: https://www.boostcourse.org/web231/lecture/1380895?isDesc=false
+출처: https://www.boostcourse.org/web231/lecture/1380895?isDesc=false
 
-## React란?
+- [React란?](#react란)
+- [리액트의 시작](#리액트의-시작)
+- [리액트 맛보기](#리액트-맛보기)
+  * [코딩 - 실행 - 배포](#코딩---실행---배포) 
+  * [리액트의 컴포넌트 만들기](#리액트의-컴포넌트-만들기)
+
+# React란?
 
 "React"는 facebook.com의 UI를 더 잘 만들기 위해서 **페이스북에서 만든 Javascript UI 라이브러리**입니다. 
 
@@ -234,22 +240,181 @@ Find out more about deployment here:
 
 ### 리액트가 없다면 
 
+순수하게 html로만 작성한 아래 코드를 먼저 살펴보자. (시맨틱 태그는 header, navigation, article, footer 와 같은 부분을 의미론적으로 정의할 때 사용하는 태그이다.) 
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>WEB</h1>
+        World Wide Web!
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h2>HTML</h2>
+        HTML is HyperText Markup Language.
+    </article>
+
+</body>
+
+</html>
+```
+
+지금은 간단한 내용이어서 header, nav, article 구분이 잘 되지만 전체 코드가 1억 줄 이상으로 늘어났다고 상상해보자. 
+
+기존의 방식대로 코드를 관리한다면 절망감에 빠질 것이다. 이때 필요한 것이 바로 리액트에서 제공하는 사용자 정의 태그, **컴포넌트**이다! 
+
 ## 리액트의 컴포넌트 만들기 
 
+### pure.html 
 
+```html
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
+<body>
+    <header>
+        <h1>WEB</h1>
+        World Wide Web!
+    </header>
 
+    <nav>
+        <ul>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+        </ul>
+    </nav>
 
+    <article>
+        <h2>HTML</h2>
+        HTML is HyperText Markup Language.
+    </article>
 
+</body>
 
+</html>
+```
 
+### App.js 
 
+```js
+import React, { Component } from "react";
+import './App.css';
 
+class Subject extends Component {
+  render(){ // 클래스 안에 속한 메소드는 function 키워드 생략 가능  
+    return (
+      // 컴포넌트는 반드시 하나의 최상위 태그만 사용해야 함. 
+      <header>
+        <h1>WEB</h1>
+        World Wide Web!
+      </header>
+    );
+  }
+}
 
+class App extends Component {
+  render(){
+    return (
+      <div className="App">
+         <Subject></Subject>
+      </div>
+    );
+  }
+}
 
+export default App; 
+```
 
+<img width="600" src="https://user-images.githubusercontent.com/68090939/177927943-0449de14-9788-4385-b9e9-157709e9c57f.png">
 
+웹 브라우저는 이 세상에 리액트라는 앱이 있는지 모른다. 그래서 페이지 소스를 확인해보면, Subject라는 사용자 정의 태그 대신에 그 안에 있는 최상위 태그 자체가 들어가 있는 것을 볼 수 있다! 
 
+App.js 파일에 작성하고 있는 코드는 실제로 자바스크립트 코드가 아니라, 문법적으로 번거로운 부분을 해결하기 위해 페이스북에서 직접 만든 컴퓨터 언어 **"jsx"**이다. 이렇게 "jsx" 로 코드를 작성하면 create-react-app이 자바스크립트 코드로 변환해준다. 
 
+### App.js 
 
+```js
+import React, { Component } from "react";
+import './App.css';
+
+class Subject extends Component {
+  render(){ // 클래스 안에 속한 메소드는 function 키워드 생략 가능  
+    return (
+      // 컴포넌트는 반드시 하나의 최상위 태그만 사용해야 함. 
+      <header>
+        <h1>WEB</h1>
+        World Wide Web!
+      </header>
+    );
+  }
+}
+
+class TOC extends Component { // Table Of Content (목차) 
+  render(){
+    return(
+      <nav>
+        <ul>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+        </ul>
+      </nav>
+    );
+  }
+}
+
+class Content extends Component {
+  render(){
+    return(
+      <article>
+        <h2>HTML</h2>
+        HTML is HyperText Markup Language.
+      </article>
+    );
+  }
+}
+
+class App extends Component {
+  render(){
+    return (
+      <div className="App">
+         <Subject></Subject>
+         <TOC></TOC>
+         <Content></Content>
+      </div>
+    );
+  }
+}
+
+export default App; 
+```
+
+<img width="600" src="https://user-images.githubusercontent.com/68090939/177929604-25bda04a-d819-47d7-8d01-1f6d7a1ace36.png"> 
+
+리액트의 **컴포넌트** Subject, TOC, Content를 정의하여, 순수 html 코드를 보기 좋게 **정리정돈** 하였다. 이처럼 리액트의 컴포넌트는 **정리정돈의 도구**라고 볼 수 있다! 
