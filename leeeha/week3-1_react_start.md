@@ -100,7 +100,7 @@ webpack compiled successfully
 
 ![image](https://user-images.githubusercontent.com/68090939/177769390-a186f0d2-b678-45d2-b2fc-7f977dac13b1.png)
 
-**리액트로 만든 컴포넌트 (사용자 정의 태그)는 id가 root인 태그 안에 들어가도록 create-react-app은 약속하고 있다! **
+**리액트로 만든 컴포넌트 (사용자 정의 태그)는 id가 root인 태그 안에 들어가도록 create-react-app은 약속하고 있다!**
 
 그러면 id가 root인 태그 안쪽에 들어가는 컴포넌트들은 어떤 파일을 수정해서 만들 수 있을까? 바로 "src" 디렉토리 안에 있는 파일들을 수정하면 된다! 그 중에서 index.js 파일을 살펴보자! 
 
