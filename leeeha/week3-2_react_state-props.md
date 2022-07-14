@@ -168,9 +168,13 @@ class App extends Component {
 
 ## Component 파일로 분리하기 
 
+https://github.com/leeeha/react-app/commit/72eb6ebfa2f897c4e2af933b7902f795ba3d8f05
 
+모든 컴포넌트들을 App.js 파일 하나에 전부 정의하면 유지보수가 힘들기 때문에, 각 컴포넌트마다 파일을 따로 생성하여 정의할 수 있다. 그리고 export, import를 통해 서로 다른 파일 간에 참조가 가능하도록 만들어준다. 
 
 ## state
+
+https://www.boostcourse.org/web231/lecture/1387397/?isDesc=false
 
 ## key 
 
