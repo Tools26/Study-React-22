@@ -2,6 +2,12 @@
 
 출처: https://www.boostcourse.org/web231/lecture/1387422?isDesc=false
 
+* [props](#props)
+* [React Developer Tools](#react-developer-tools)
+* [Component 파일로 분리하기](#component-파일로-분리하기)
+* [state 소개](#state-소개)
+* [state 사용](#state-사용)
+
 ## props
 
 ```js
@@ -205,7 +211,7 @@ class App extends Component {
     super(props);
     this.state = {
       subject:{title:'WEB', sub:'World Wide Web!'}, 
-      // state의 속성이 여러 개의 값을 가질 때는 배열로 선언 
+      // 속성이 가진 데이터가 여러 개일 때는 배열 사용
       contents:[
         {id:1, title:'HTML', desc:'HTML is for information'},
         {id:2, title:'CSS', desc:'CSS is for design'},
@@ -222,9 +228,12 @@ class App extends Component {
             title={this.state.subject.title}
             sub={this.state.subject.sub}>
           </Subject>
-          
-         <TOC data={this.state.contents}></TOC>
-         
+
+          <TOC 
+            // contents에 담긴 배열 정보를 TOC 컴포넌트에 주입하기 
+            data={this.state.contents}>
+          </TOC>
+
          <Content title="HTML" desc="HTML is HyperText Markup Language."></Content>
       </div>
     );
@@ -268,8 +277,13 @@ export default TOC;
 
 ![image](https://user-images.githubusercontent.com/68090939/179208431-336be1b5-5832-4879-bc72-db522126cd76.png)
 
-이 에러를 해결하려면 리스트의 각 항목에 key 값을 지정해줘야 한다. 
+이 에러를 해결하려면 **리스트의 각 항목이 key 값을 통해 서로 구분될 수 있도록**, li 태그에 key 속성을 부여해줘야 한다. 
+
+`lists.push(<li key={data[i].id}><a href={"/content/"+data[i].id}>{data[i].title}</a></li>)`
+
+<br> 
 
 ![image](https://user-images.githubusercontent.com/68090939/179209485-8e3c3695-5c12-4717-a01c-810e02ef530b.png)
 
+이처럼 **상위 컴포넌트 \<App>의 내부 state를 \<TOC>에 주입하면, \<TOC> 내부 데이터가 \<App>에 의해 자동으로 바뀌도록 만들 수 있다.** \<App>의 입장에서는 \<TOC>가 내부적으로 어떻게 동작하는지 알 필요가 없어진다! 
 
