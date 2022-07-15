@@ -208,6 +208,7 @@ import './App.css';
 class App extends Component {
   // render() 보다 먼저 실행되어 초기화를 담당하는 생성자 
   constructor(props){
+    // 부모 클래스의 생성자를 먼저 호출해주지 않으면, this에 접근 불가! 
     super(props);
     this.state = {
       subject:{title:'WEB', sub:'World Wide Web!'}, 
