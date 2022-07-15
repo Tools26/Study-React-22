@@ -4,7 +4,9 @@
 
 
 
-## 이벤트 state, props, render 함수 
+## 이벤트 state, props, 그리고 render 함수 
+
+
 
 ## 이벤트 설치 
 
