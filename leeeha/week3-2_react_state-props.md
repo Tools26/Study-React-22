@@ -172,9 +172,104 @@ https://github.com/leeeha/react-app/commit/72eb6ebfa2f897c4e2af933b7902f795ba3d8
 
 모든 컴포넌트들을 App.js 파일 하나에 전부 정의하면 유지보수가 힘들기 때문에, 각 컴포넌트마다 파일을 따로 생성하여 정의할 수 있다. 그리고 export, import를 통해 서로 다른 파일 간에 참조가 가능하도록 만들어준다. 
 
-## state
+## state 소개 
 
-https://www.boostcourse.org/web231/lecture/1387397/?isDesc=false
+어떤 제품이든 **사용자의 입장**과 그것을 구현하는 **구현자의 입장**이 있다.
 
-## key 
+사용자의 입장에서 장치의 버튼 클릭, 화면 터치 등의 동작으로 제품을 조작하는 것을 '유저 인터페이스' 라고 부른다.
+
+리액트에서는 "props"가 바로 사용자가 제품을 조작할 수 있게 하는 장치 같은 것이다. 그리고 제품을 만드는 사람은 제품의 내부적인 구현과 다양한 상태들을 사용하기 위한 여러 장치를 갖고 있다. 이를 비유적으로 "state"라고 볼 수 있다. 
+
+즉, **"props"는 사용자가 컴포넌트를 조작할 수 있게 하는 장치**이고, **"state"는 props의 값에 따라 내부적으로 기능을 구현하기 위한 여러 데이터들**이라 볼 수 있다. 
+
+![image](https://user-images.githubusercontent.com/68090939/179201439-89643971-836b-4922-95ed-4ef19aaf259b.png) 
+
+**리액트로 만든 컴포넌트가 좋은 부품이 되려면, props와 state가 철저하게 분리되어 있어야 한다.** 사용자와 구현자를 서로 격리시켜서 양쪽의 편의성을 도모하는 것이 좋은 부품을 만드는 데 핵심이 된다. 
+
+이제 **좀더 복합적으로 다양한 일을 하는 컴포넌트를 만들기 위해 필요한 "state"에 대해 알아보자.** 이 과정에서 우리는 "props"도 더 잘 이해하게 될 것이다. 
+
+## state 사용 
+
+**App.js** 
+
+```js
+import React, { Component } from "react";
+import TOC from "./components/TOC"
+import Subject from "./components/Subject"
+import Content from "./components/Content"
+import './App.css';
+
+class App extends Component {
+  // render() 보다 먼저 실행되어 초기화를 담당하는 생성자 
+  constructor(props){
+    super(props);
+    this.state = {
+      subject:{title:'WEB', sub:'World Wide Web!'}, 
+      // state의 속성이 여러 개의 값을 가질 때는 배열로 선언 
+      contents:[
+        {id:1, title:'HTML', desc:'HTML is for information'},
+        {id:2, title:'CSS', desc:'CSS is for design'},
+        {id:3, title:'JavaScript', desc:'JavaScript is for interaction'}
+      ]
+    }
+  }
+
+  render(){
+    return (
+      <div className="App">
+         <Subject
+            // props의 데이터를 state에서 가져옴. 
+            title={this.state.subject.title}
+            sub={this.state.subject.sub}>
+          </Subject>
+          
+         <TOC data={this.state.contents}></TOC>
+         
+         <Content title="HTML" desc="HTML is HyperText Markup Language."></Content>
+      </div>
+    );
+  }
+}
+
+export default App; 
+```
+
+<br>
+
+**TOC.js** 
+
+```js
+import React, { Component } from "react";
+
+class TOC extends Component {
+    render(){
+        var lists = [];
+        var data = this.props.data; // TOC 컴포넌트의 props 참조 
+        var i = 0;
+        while(i < data.length){ 
+            // 여러 항목을 자동으로 생성할 때는, 각 항목이 key 값을 가져야 한다. 
+            lists.push(<li key={data[i].id}><a href={"/content/"+data[i].id}>{data[i].title}</a>
+            </li>)
+            i++;
+        }
+
+        return(
+            <nav>
+                <ul>
+                    {lists}
+                </ul>
+            </nav>
+        );
+    }
+}
+
+export default TOC;
+```
+
+![image](https://user-images.githubusercontent.com/68090939/179208431-336be1b5-5832-4879-bc72-db522126cd76.png)
+
+이 에러를 해결하려면 리스트의 각 항목에 key 값을 지정해줘야 한다. 
+
+![image](https://user-images.githubusercontent.com/68090939/179209485-8e3c3695-5c12-4717-a01c-810e02ef530b.png)
+
 
