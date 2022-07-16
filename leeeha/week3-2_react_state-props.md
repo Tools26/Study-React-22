@@ -129,7 +129,24 @@ class App extends Component {
 export default App; 
 ```
 
-바로 이렇게 컴포넌트에 원하는 속성을 부여한 다음에 [공식 문서](https://reactjs.org/docs/components-and-props.html)의 설명에 따라 JSX의 문법으로 컴포넌트의 속성을 참조하면 된다. 결국 html에서의 속성이 리액트에서는 props인 것이다. 이제 같은 컴포넌트라고 하더라도, 그 속성 값에 따라 다른 결과를 보여줄 수 있다! 
+바로 이렇게 컴포넌트에 원하는 속성을 부여한 다음에 [공식 문서](https://reactjs.org/docs/components-and-props.html)의 설명에 따라 JSX의 문법으로 **컴포넌트의 속성을 참조**하면 된다. 
+
+```js
+class Subject extends Component {
+  render(){ 
+    return (
+      <header>
+        <h1>{this.props.title}</h1> 
+        {this.props.sub} 
+      </header>
+    );
+  }
+}
+```
+
+결국 html에서의 속성이 리액트에서는 props인 것이다. 
+
+이제 같은 컴포넌트라고 하더라도, 그 속성 값에 따라 다른 결과를 보여줄 수 있다! 
 
 ```js
 class App extends Component {
@@ -158,7 +175,7 @@ class App extends Component {
 
 ![image](https://user-images.githubusercontent.com/68090939/178985330-6a297187-4476-40ee-8469-a3fe4e739293.png)
 
-이 네가지를 스스로 할 수 있게 된다면, 우리는 강사로부터 독립한 것! 
+이 네가지를 스스로 할 수 있게 된다면, 우리는 강사로부터 독립했다고 말할 수 있다! 
 
 이 중에서 **현재 상태를 측정할 수 있는 도구인 React Developer Tools**를 설치하고 사용해보자. 
 
@@ -184,7 +201,7 @@ https://github.com/leeeha/react-app/commit/72eb6ebfa2f897c4e2af933b7902f795ba3d8
 
 사용자의 입장에서 장치의 버튼 클릭, 화면 터치 등의 동작으로 제품을 조작하는 것을 '유저 인터페이스' 라고 부른다.
 
-리액트에서는 "props"가 바로 사용자가 제품을 조작할 수 있게 하는 장치 같은 것이다. 그리고 제품을 만드는 사람은 제품의 내부적인 구현과 다양한 상태들을 사용하기 위한 여러 장치를 갖고 있다. 이를 비유적으로 "state"라고 볼 수 있다. 
+리액트에서는 "props"가 바로 사용자가 제품을 조작할 수 있게 하는 장치 같은 것이다. 그리고 제품을 만드는 사람은 제품의 내부적인 구현과 다양한 상태들을 사용하기 위한 여러 장치들을 갖고 있다. 이를 비유적으로 "state"라고 볼 수 있다. 
 
 즉, **"props"는 사용자가 컴포넌트를 조작할 수 있게 하는 장치**이고, **"state"는 props의 값에 따라 내부적으로 기능을 구현하기 위한 여러 데이터들**이라 볼 수 있다. 
 
