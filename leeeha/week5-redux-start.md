@@ -70,11 +70,11 @@ dispatch가 reducer를 호출할 때 **현재의 state 값과 action 데이터�
 
 또 하나의 핵심은 store에 있는 **state에 직접 접근하는 게 금지**되어 있기 때문에, 
 
-getState를 통해 값을 가져오고, 
+**getState**를 통해 값을 가져오고, 
 
-dispatch를 통해 값을 변경시키고, 
+**dispatch**를 통해 값을 변경시키고, 
 
-subscribe를 이용해 값이 변경되었을 때 구동될 함수들을 등록해준다는 것이다. 
+**subscribe**를 이용해 값이 변경되었을 때 구동될 함수들을 등록해준다는 것이다. 
 
 그리고 또 하나의 핵심은 **reducer를 통해서 state 값을 변경한다**는 것이다! 
 
