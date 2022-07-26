@@ -78,17 +78,4 @@ dispatch가 reducer를 호출할 때 **현재의 state 값과 action 데이터�
 
 그리고 또 하나의 핵심은 **reducer를 통해서 state 값을 변경한다**는 것이다! 
 
-# 리덕스가 좋은 가장 중요한 이유
-
-
-
-
-
-
-
-
-
-
-
-
 
