@@ -42,9 +42,9 @@ Submit 버튼을 눌러 추가된 글 목록이 갱신될 때, 리덕스가 어�
 
 ![image](https://user-images.githubusercontent.com/68090939/180644877-5d5bf356-9255-4442-8a7c-f5471d69910d.png)
 
-Submit 버튼에 설정되어 있는 onsubmit 라는 이벤트가 발생하면, store의 dispatch에게 action이라는 객체를 하나 전송하게 된다. 여기서 가장 중요한 건, type이 'create'라는 것이다. 
+Submit 버튼에 설정되어 있는 onsubmit 라는 이벤트가 발생하면, **store의 dispatch에게 action이라는 객체를 하나 전송**하게 된다. 여기서 가장 중요한 건, **type이 'create'**라는 것이다. 
 
-dispatch는 두 가지 역할을 한다. 첫번째는 reducer를 호출해서 state 값을 변경시키는 것이고, 두번째는 subcribe로 render 함수를 호출하여 화면을 갱신하는 것이다. 
+dispatch는 두 가지 역할을 한다. 첫번째는 **reducer를 호출해서 state 값을 변경시키는 것**이고, 두번째는 **subcribe로 render 함수를 호출하여 화면을 갱신하는 것**이다. 
 
 우선 dispatch가 reducer를 어떻게 다루는지 먼저 살펴보자. 
 
@@ -77,6 +77,17 @@ dispatch가 reducer를 호출할 때 **현재의 state 값과 action 데이터�
 **subscribe**를 이용해 값이 변경되었을 때 구동될 함수들을 등록해준다는 것이다. 
 
 그리고 또 하나의 핵심은 **reducer를 통해서 state 값을 변경한다**는 것이다! 
+
+# 리덕스가 좋은 가장 중요한 이유
+
+
+
+
+
+
+
+
+
 
 
 
