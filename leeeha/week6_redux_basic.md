@@ -6,13 +6,14 @@
 
 # 리덕스가 없다면 
 
+- 자료 출처: https://www.boostcourse.org/web231/lecture/1387448?isDesc=false 
+- 전체 소스 코드 확인: https://github.com/leeeha/redux
+
 <img width="500" src="https://user-images.githubusercontent.com/68090939/181704756-8f111772-f8fe-414d-bbb6-d555a36d9086.png"/>
 
 <img width="500" src="https://user-images.githubusercontent.com/68090939/181704792-d3705d67-a7e5-4659-bd4c-7f590627fee7.png"/>
 
 <img width="500" src="https://user-images.githubusercontent.com/68090939/181704826-4cc9105e-bf74-4b99-9121-b1040dd4ffe3.png"/> 
-
-전체 소스 코드 확인: https://github.com/leeeha/redux
 
 ## without-redux.html 
 
@@ -214,7 +215,22 @@ blue();
 
 프로그램을 작성하는 우리 입장에서도 blue 라는 컴포넌트를 만들 때는 blue 컴포넌트에만 집중하면 되니까 훨씬 편하다! 
 
-## 시간 여행 
+## 시간 여행 (Redux DevTools)
+
+https://github.com/zalmoxisus/redux-devtools-extension
+
+**리덕스의 시간여행 기능은 웹 서버를 통해 서비스 되는 웹 페이지에서만 사용할 수 있다!** 
+
+그래서 [이 포스트](https://writingdeveloper.tistory.com/305)를 참고하여 Web Server for Chrome 이라는 앱을 간단히 설치하고, html 파일이 localhost 환경에서 실행될 수 있게 만들었다. 
+
+![image](https://user-images.githubusercontent.com/68090939/181714271-2fc23a29-3a12-4e4b-a5b2-6537ee711052.png)
+
+그러면 이렇게 Redux DevTools를 이용하여 상태 변화를 추적할 수 있게 된다! 정말 신기한 기능 👍👍 
+
+나중에 내가 만든 웹 페이지가 더 복잡해지면, 이 도구가 아주 유용하게 사용될 거 같다. 
+
+
+
 
 
 
