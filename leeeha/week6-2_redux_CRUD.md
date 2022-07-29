@@ -1,7 +1,7 @@
 참고 강의: https://www.boostcourse.org/web231/lecture/1387454?isDesc=false
 전체 소스 코드 확인: https://github.com/leeeha/redux
 
-강의 설명을 따라서 Update를 제외하고 Create, Read, Delete 기능을 리덕스로 구현해봤다. 
+강의 설명을 따라서 Update 기능을 제외하고 Create, Read, Delete 기능을 리덕스로 구현하였다. 
 
 # Read 
 
